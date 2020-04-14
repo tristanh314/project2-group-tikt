@@ -1,0 +1,23 @@
+# Empty CSS file for your own CSS
+
+.row1 {
+    background: #FED90F;
+  }
+
+.col-md-12 {
+    background: #FED90F;
+}
+
+.header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+.centerGraph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
