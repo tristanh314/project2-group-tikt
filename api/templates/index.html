@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click a button to return a JSON of the appropriate data.</p>
+
+<button onclick="characters()">Return data on Simpsons characters.</button>
+<br/>
+<button onclick="episodes()">Return data on Simpsons episodes.</button>
+<br/>
+<button onclick="locations()">Return data on Simpsons locations.</button>
+</br>
+<button onclick="scriptLines()">Return data on Simpsons script lines.</button>
+
+<script>
+    // Get the home page url.
+    var home = document.URL;
+    // Redirect to the characters route.
+    function characters() {
+    location.href = `${home}/simpsons_characters`;
+    }
+    // Redirect to the episodes route.
+    function episodes() {
+    location.href = `${home}/simpsons_episodes`;
+    }
+    // Redirect to the locations route.
+    function locations() {
+    location.href = `${home}/simpsons_locations`;
+    }
+    // Redirect to the script lines route.
+    function scriptLines() {
+    location.href = `${home}/simpsons_script_lines`;
+    }
+</script>
+
+</body>
+</html>
