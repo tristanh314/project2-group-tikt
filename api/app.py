@@ -1,19 +1,19 @@
+# Import dependencies.
 from flask import Flask, render_template, jsonify
 from flask_pymongo import PyMongo
-import json
 
-# Create an instance of Flask
+# Create an instance of Flask.
 app = Flask(__name__)
 
-# Use PyMongo to establish Mongo connection
+# Use PyMongo to establish Mongo connection.
 mongo = PyMongo(app, uri="mongodb://localhost:27017/simpson_data")
 
 
-# Route to render index.html template using data from Mongo
+# Route to render index.html template using data from Mongo.
 @app.route("/")
 def home():
 
-    # Return template and data
+    # Return template and data.
     return render_template("index.html")
 
 
