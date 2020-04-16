@@ -5,11 +5,7 @@ from flask_pymongo import PyMongo
 # Create an instance of Flask.
 app = Flask(__name__)
 
-<<<<<<< HEAD
-# Use PyMongo to establish Mongo connection
-=======
 # Use PyMongo to establish Mongo connection.
->>>>>>> tdhwork
 mongo = PyMongo(app, uri="mongodb://localhost:27017/simpson_data")
 
 
