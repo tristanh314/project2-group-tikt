@@ -1,9 +1,13 @@
 # Import dependencies.
 from flask import Flask, render_template, jsonify
 from flask_pymongo import PyMongo
+from flask_cors import CORS
 
 # Create an instance of Flask.
 app = Flask(__name__)
+
+# Set up CORS for the app.
+cors = CORS(app)
 
 # Use PyMongo to establish Mongo connection.
 mongo = PyMongo(app, uri="mongodb://localhost:27017/simpson_data")
