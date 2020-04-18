@@ -1,7 +1,6 @@
 # project2-group-tikt
 Home of the UO data analytics boot camp Project 2 for group TIKT
 
-<<<<<<< HEAD
 ## Project 2 Proposal:
 
 ### Team members: Iris Arnold, Ty Sorenson, Karl Unverferth, Tristan Holmes
@@ -74,20 +73,8 @@ Bubble scatter (user chooses catchphrase from dropdown)
 
 ### Sketch from Ty:
 
-![table pic](wireframe.png)
+    ![ty sketch](Simpsons Wireframe.pdf)
 
 ### Additional JavaScript library: “chart.js”
 * Good documentation
 * Commonly used
-
-
-
-
-  
-
-=======
-# This is our read me
-
-## This is out read me
-===========================
->>>>>>> 56ff07ff98fdc3aaeb92c87843742799a6a70958
