@@ -16,6 +16,7 @@
 
 	<!-- add field to read -->
 	<script type="text/javascript" src="simpson_script.json"></script>
+	
 
   </head>
   <body>
@@ -96,12 +97,12 @@
 			   
 			</p>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" id="graph1">
 					<hr>
 					<h2>
 						<center><B>Graph 1</B></center>
 					</h2>
-					<img alt="Bootstrap Image Preview" src="images/tv_ratings.png" class="centerGraph">
+					<img alt="Bootstrap Image Preview" src="images/cartoon-donut-png-3.png" class="centerGraph">
 					<br>
 					<br>
 					<p>
@@ -110,12 +111,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" id="graph2">
 					<hr>
 					<h2>
 						<center><B>Graph 2</B></center>
 					</h2>
-					<img alt="Bootstrap Image Preview" src="images/tv_ratings.png" class="centerGraph">
+					<img alt="Bootstrap Image Preview" src="images/cartoon-donut-png-3.png" class="centerGraph">
 					<br>
 					<br>
 					<p>
@@ -124,12 +125,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" id="graph3">
 					<hr>
 					<h2>
 						<center><B>Graph 3</B></center>
 					</h2>
-					<img alt="Bootstrap Image Preview" src="images/tv_ratings.png" class="centerGraph">
+					<img alt="Bootstrap Image Preview" src="images/cartoon-donut-png-3.png" class="centerGraph">
 					<br>
 					<br>
 					<p>
@@ -138,12 +139,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" id="graph4">
 					<hr>
 					<h2>
 						<center><B>Graph 4</B></center>
 					</h2>
-					<img alt="Bootstrap Image Preview" src="images/tv_ratings.png" class="centerGraph">
+					<img alt="Bootstrap Image Preview" src="images/cartoon-donut-png-3.png" class="centerGraph">
 					<br>
 					<br>
 					<p>
@@ -152,7 +153,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" id="imageGenerator">
 					<hr>
 					<h2>
 						<center><B>Simpsons Episode Image Generator</B></center>
@@ -160,19 +161,19 @@
 					<br>
 					<h3>
 						<center>¡Ay, caramba dude! Pick your favorite episode and don't have a cow man!</center>
-					</h3>
+					</h3><br>
 					<form>
-						<center><form action="/action_page.php">
-							<label for="season_name">Season:</label><br>
-							<input type="text" id="sname" name="sname"><br>
-							<label for="episode_name">Episode:</label><br>
+						<center><form action="/action_page.php">	
+							<label for="season_name"><b>Season:</b></label><br>
+							<input type="text" id="sname" name="sname"><br><br>
+							<label for="episode_name"><b>Episode:</b></label><br>
 							<input type="text" id="ename" name="ename"><br><br>
-							<input type="submit" value="Submit">
+							<input type="submit" id="submit" value="Submit">
 						  </form></center>
 					</form>
 					<br>
-					<div>
-						test
+					<div class="col-md-12" id="imageGeneratorContainer">
+						<center><img alt="Bootstrap Image Preview" src="images/simpsons_footer_family.jpg" class="centerGraph"></center>
 					</div>
 				</div>
 			</div>	
@@ -193,7 +194,8 @@
 	</div>
 </div>
 
-    <script src="static/js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+	<script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/scripts.js"></script>
   </body>
