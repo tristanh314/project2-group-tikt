@@ -102,13 +102,13 @@
 				<div class="col-md-12" id="graph2">
 					<hr>
 					<h2>
-						<center><B>Graph 2</B></center>
+						<center><B>Comparison of IMDB ratings to IMDB vote count</B></center>
 					</h2>
-					<canvas id="karlchart" width="400" height="400"></canvas>
+					<center><canvas id="karlChart" width="1000" height="500"></canvas></center>
 					<br>
 					<br>
 					<p>
-						Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+						<strong>Comparison of IMDB ratings to IMDB vote count</strong><p>This analysis of The Simpsons yields that there is a strong correlation between IMDB ratings and IMDB vote counts. The graph above shows the comparisons between these variables over the course of season 10. Upon futher investigation, a regression analysis of season 10 produced a r^2 value of 0.6937 while a regression analysis on the whole series produced a r^2 value of 0.7832.</p>
 					</p>
 				</div>
 			</div>
@@ -201,7 +201,8 @@
 		</div>
 	</div>
 </div>
-
+	<script>window.Tether = {};</script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -217,5 +218,8 @@
 	<script src="static/js/scripts.js"></script>
 	<script src="ty_app.js"></script>
 	<script>window.Tether = {};</script>
+	<script src="static/js/scripts.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="karl_app.js"></script>
   </body>
 </html>
