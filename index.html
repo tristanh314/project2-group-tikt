@@ -112,7 +112,7 @@
 					<h2>
 						<center><B>Graph 2</B></center>
 					</h2>
-					<img alt="Bootstrap Image Preview" src="images/tv_ratings.png" class="centerGraph">
+					<center><canvas id="karlChart" width="1000" height="500"></canvas></center>
 					<br>
 					<br>
 					<p>
@@ -181,10 +181,12 @@
 		</div>
 	</div>
 </div>
-
+	<script>window.Tether = {};</script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 	<script src="static/js/jquery.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/scripts.js"></script>
+	<script src="static/js/scripts.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="karl_app.js"></script>
   </body>
 </html>
