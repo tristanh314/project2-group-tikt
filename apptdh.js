@@ -54,7 +54,7 @@ d3.json("static/data/simpson_episodes.json").then(function(episodeData, err) {
 
 // Function to render the bubble chart.
 function renderBubble(canvas, season, catchphrase) {
-    console.log(catchphrase);
+    
     // Get the script data.
     d3.json("static/data/simpson_script.json").then(function(lineData, err) {
         if (err) throw err;
@@ -105,7 +105,7 @@ function renderBubble(canvas, season, catchphrase) {
                     }
                 });
             });
-            console.log(catchphrase);
+
             // Console log episodes in season to check formatting.
             // console.log(episodesInSeason);
 
