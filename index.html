@@ -8,15 +8,14 @@
     <title>Simpsons Data | Doh!</title>
 
     <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+	<meta name="author" content="LayoutIt!">
 
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
 	<link href="static/css/style.css" rel="stylesheet">
 	<!-- <link href="static/css/bootstrap.css" rel="stylesheet"> -->
 
 	<!-- add field to read -->
-	<script type="text/javascript" src="simpson_script.json"></script>
-	
+	<script type="text/javascript" src="static/data/simpson_episodes.json"></script>
 
   </head>
   <body>
@@ -25,10 +24,9 @@
 	<div class="row1">
 		<div class="col-md-12">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="#"></a>
+				</button> <a class="navbar-brand" href="#"></a> -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 					<!-- NAV BAR IS ABOVE HERE -->
@@ -49,12 +47,12 @@
 							</div>
 						</li>
 					</ul> -->
-					<form class="form-inline">
+					<!-- <form class="form-inline">
 						<input class="form-control mr-sm-2" type="text"> 
 						<button class="btn btn-primary my-2 my-sm-0" type="submit">
 							Search
 						</button>
-					</form>
+					</form> -->
 					<!-- <ul class="navbar-nav ml-md-auto">
 						<li class="nav-item active">
 							 <a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a> -->
@@ -128,9 +126,46 @@
 				<div class="col-md-12" id="graph3">
 					<hr>
 					<h2>
-						<center><B>Graph 3</B></center>
+						<center><B>US Viewers per Episode in a Season</B></center>
 					</h2>
-					<img alt="Bootstrap Image Preview" src="images/cartoon-donut-png-3.png" class="centerGraph">
+					<br>
+					<center><div class="dropdown">
+						<h4>
+							<label for="seasons"><b>Choose a Season:</b></label>
+						</h4>
+						<select id="seasons">
+  							<option value="1">Season 1</option>
+  							<option value="2">Season 2</option>
+							<option value="3">Season 3</option>
+							<option value="4">Season 4</option>
+							<option value="5">Season 5</option>
+							<option value="6">Season 6</option>
+							<option value="7">Season 7</option>
+							<option value="8">Season 8</option>
+							<option value="9">Season 9</option>
+							<option value="10">Season 10</option>
+							<option value="11">Season 11</option>
+							<option value="12">Season 12</option>
+							<option value="13">Season 13</option>
+							<option value="14">Season 14</option>
+							<option value="15">Season 15</option>
+							<option value="16">Season 16</option>
+							<option value="17">Season 17</option>
+							<option value="18">Season 18</option>
+							<option value="19">Season 19</option>
+							<option value="20">Season 20</option>
+							<option value="21">Season 21</option>
+							<option value="22">Season 22</option>
+							<option value="23">Season 23</option>
+							<option value="24">Season 24</option>
+							<option value="25">Season 25</option>
+							<option value="26">Season 26</option>
+							<option value="27">Season 27</option>
+							<option value="28">Season 28</option>
+						</select>
+					  </div></center>
+					  <br>
+					<canvas id="tyChart" width="70%"></canvas>
 					<br>
 					<br>
 					<p>
@@ -152,7 +187,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-12" id="imageGenerator">
 					<hr>
 					<h2>
@@ -176,7 +211,7 @@
 						<center><img alt="Bootstrap Image Preview" src="images/simpsons_footer_family.jpg" class="centerGraph"></center>
 					</div>
 				</div>
-			</div>	
+			</div>	 -->
 			<div class="row">
 				<div class="col-md-12">
 					<hr>
@@ -196,7 +231,10 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 	<script src="static/js/jquery.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/scripts.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="static/js/scripts.js"></script>
+	<script src="ty_app.js"></script>
+	<script>window.Tether = {};</script>
   </body>
 </html>
