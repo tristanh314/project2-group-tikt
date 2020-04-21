@@ -1,28 +1,40 @@
-<script>
-function myFunction() {
+// Function to run when the page first loads.
+function init() {
+    
+    // Select the canvas to contain the bubble chart.
+    var canvas = document.getElementById("tdhchart");
 
-    var request;
-    var input1 = document.getElementById('sname');
-    var input2 = document.getElementById('ename');
-    var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
-    var apikey =
-        '&APPID=433b12b793d7ebc17989745c069a540b';
-    var sum = api + input1.value + apikey;
+    // Set the initial season.
+    var season = 1;
 
-    request = new XMLHttpRequest();
-
-    request.open('GET', sum, true);
-    request.onload = function () {
-
-        var data = JSON.parse(this.response);
-        if (request.status >= 200 && request.status < 400) {
-            console.log(data);
-        } else {
-            console.log(input1.value);
-        }
-    }
-
-    request.send();
+    // Set the initial catchphrase.
+    var catchphrase = "homer";
+    
+    // Render the initial bubble chart.
+    renderBubble(canvas, season, catchphrase);
 }
-</script>
 
+// Function to run when a selection changes.
+function optionChanged() {
+    console.log(d3.select("#selSeason").property("value"));
+    console.log(d3.select("#input-catchphrase").property("value"));
+
+    // Select the canvas to contain the bubble chart.
+    var canvas = document.getElementById("tdhchart");
+
+    // Get the season.
+    var season = parseInt(d3.select("#selSeason").property("value"));
+
+    // Get the catchphrase.
+    var catchphrase = d3.select("#input-catchphrase").property("value").toLowerCase(); 
+    
+    // Render the new bubble chart.
+    renderBubble(canvas, season, catchphrase);
+}
+
+// Call optionChanged() when a change takes place to the DOM
+d3.select("#selDataset").on("change", optionChanged);
+d3.select("#input-catchphrase").on("change", optionChanged);
+
+// Run the init function
+init();
