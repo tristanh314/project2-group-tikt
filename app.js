@@ -16,8 +16,6 @@ function init() {
 
 // Function to run when a selection changes.
 function optionChanged() {
-    console.log(d3.select("#selSeason").property("value"));
-    console.log(d3.select("#input-catchphrase").property("value"));
 
     // Select the canvas to contain the bubble chart.
     var canvas = document.getElementById("tdhchart");
