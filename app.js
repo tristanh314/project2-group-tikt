@@ -26,15 +26,15 @@ function optionChanged() {
     var season = parseInt(d3.select("#selSeason").property("value"));
 
     // Get the catchphrase.
-    var catchphrase = d3.select("#input-catchphrase").property("value").toLowerCase(); 
-    
+    var catchphrase = d3.select("#input-catchphrase").property("value"); 
+
     // Render the new bubble chart.
     renderBubble(canvas, season, catchphrase);
 }
 
 // Call optionChanged() when a change takes place to the DOM
-d3.select("#selDataset").on("change", optionChanged);
 d3.select("#input-catchphrase").on("change", optionChanged);
+d3.select("#selDataset").on("change", optionChanged);
 
 // Run the init function
 init();

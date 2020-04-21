@@ -1,3 +1,25 @@
+// Function to find the minimum in an array of moments.
+function minMoment(dates) {
+    var start = moment(new Date(9999, 0, 1));
+    dates.forEach((date) => {
+        if (moment(date).isBefore(start)) {
+              start = moment(date);
+        }
+    });
+    return start
+}
+
+// Function to find the maximum of an array of dates
+function maxMoment(dates) {
+    var start = moment(new Date(1970, 0, 1));
+    dates.forEach((date) => {
+        if (moment(date).isAfter(start)) {
+              start = moment(date);
+        }
+    });
+    return start
+}
+
 // Fetch the episode data
 d3.json("static/data/simpson_episodes.json").then(function(episodeData, err) {
     if (err) throw err;
@@ -32,6 +54,7 @@ d3.json("static/data/simpson_episodes.json").then(function(episodeData, err) {
 
 // Function to render the bubble chart.
 function renderBubble(canvas, season, catchphrase) {
+    console.log(catchphrase);
     // Get the script data.
     d3.json("static/data/simpson_script.json").then(function(lineData, err) {
         if (err) throw err;
@@ -48,7 +71,7 @@ function renderBubble(canvas, season, catchphrase) {
                 episode.id = +episode.id;
                 episode.season = +episode.season;
                 episode.imdb_rating = +episode.imdb_rating;
-                episode.original_air_date = Date.parse(episode.original_air_date);
+                episode.original_air_date = moment(episode.original_air_date).format("YYYY MM DD");
             });
 
             // Console log data to check format.
@@ -76,13 +99,13 @@ function renderBubble(canvas, season, catchphrase) {
 
                     // If the line contains the catchphrase, increase the catchphrase count by 1.
                     if (line.normalized_text){
-                        if (line.normalized_text.includes(catchphrase) && line.episode_id === episode.id) {
+                        if (line.normalized_text.includes(catchphrase.toLowerCase()) && line.episode_id === episode.id) {
                             episode.catchphrase_count += 1;
                         }
                     }
                 });
             });
-
+            console.log(catchphrase);
             // Console log episodes in season to check formatting.
             // console.log(episodesInSeason);
 
@@ -111,18 +134,31 @@ function renderBubble(canvas, season, catchphrase) {
 
             // Set the options for the plot.
             chartOptions = {
+                // responsive: false,
+                legend: {
+                    display: false
+                },
                 title: {
                     display: true,
                     text: `Season ${season} Occurances of ${catchphrase}`
                 }, 
                 scales: {
-                    yAxes: [{ 
+                    yAxes: [{
+                        ticks: {
+                            min: Math.min(...episodesInSeason.map(episode => episode.imdb_rating)) - 1,
+                            max: Math.max(...episodesInSeason.map(episode => episode.imdb_rating)) + 1
+                        }, 
                         scaleLabel: {
                             display: true,
                             labelString: "IMDB Rating"
                         }
                     }],
                     xAxes: [{ 
+                        type: "time",
+                        ticks: {
+                            min: minMoment(episodesInSeason.map(episode => episode.original_air_date)).subtract(1, "M"),
+                            max: maxMoment(episodesInSeason.map(episode => episode.original_air_date)).add(1, "M")
+                        },
                         scaleLabel: {
                             display: true,
                             labelString: "Original Air date"
