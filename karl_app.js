@@ -1,13 +1,9 @@
-//script tag to add to html: https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js
-
 d3.json("static/data/simpson_episodes.json").then((data) => {
     var ratingsSample = data.result.filter(episode => episode.season===10);
-    // var ratingsSample = data.result;
     // console.log(ratingsSample);
     var labels = ratingsSample.sort((a, b) => (a.season - b.season));
     
 var dataSet = {
-    // labels: ["0", "100", "200", "300", "400", "500", "600"],
     labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
     datasets: [
         {
@@ -38,7 +34,7 @@ var karlChart = new Chart(ctx, {
         stacked: false,
         title:{
             display: true,
-            text:'The Simpsons Season: 10, IMDB Ratings and IMDB Vote Count'
+            text:'The Simpsons Season: 10, IMDB ratings and IMDB vote count'
         },
         scales: {
             yAxes: [{
