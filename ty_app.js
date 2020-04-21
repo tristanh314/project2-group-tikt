@@ -29,9 +29,28 @@ d3.json("static/data/simpson_episodes.json").then(function(simpsonsData)
           ]
         },
         options: {
-          title: {
-            display: false,
-          }
+          // responsive: false,
+          // layout: {
+          //   padding: {
+          //       left: 50,
+          //       right: 50
+          //   }
+          // };
+          maintainAspectRatio: true,
+          scales: {
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Episode'
+              }
+            }],
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'US Viewers (millions)'
+              }
+            }]
+          }     
         }
       });
     } 
@@ -41,29 +60,8 @@ d3.json("static/data/simpson_episodes.json").then(function(simpsonsData)
     });
 
     
-// // init function to load chart with page load data
-// // update chart function. Take a paramater based on selection and update chart based on selection. 
-// // Set an event listner for user Input. When that changes it runs chart again on new value. 
 
-// // chart 3 build information
-new Chart(document.getElementById("tyChart"), {
-    type: 'line',
-    data: {
-      labels: number_in_season,
-      datasets: [{ 
-          data: us-viewers_in_millions,
-          label: "test",
-          borderColor: "#3e95cd",
-          fill: false
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: false,
-      }
-    }
-  });
+
 
 
 
