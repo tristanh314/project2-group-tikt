@@ -8,7 +8,7 @@
     <title>Simpsons Data | Doh!</title>
 
     <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+	<meta name="author" content="LayoutIt!">
 
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
 	<link href="static/css/style.css" rel="stylesheet">
@@ -16,14 +16,13 @@
   </head>
   <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="container">
 	<div class="row1">
 		<div class="col-md-12">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="#"></a>
+				</button> <a class="navbar-brand" href="#"></a> -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 					<!-- NAV BAR IS ABOVE HERE -->
@@ -44,12 +43,12 @@
 							</div>
 						</li>
 					</ul> -->
-					<form class="form-inline">
+					<!-- <form class="form-inline">
 						<input class="form-control mr-sm-2" type="text"> 
 						<button class="btn btn-primary my-2 my-sm-0" type="submit">
 							Search
 						</button>
-					</form>
+					</form> -->
 					<!-- <ul class="navbar-nav ml-md-auto">
 						<li class="nav-item active">
 							 <a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a> -->
@@ -74,22 +73,16 @@
 				<hr>
 			</h1>
 			<p>
-				Bart: Lis, you made the school worse than it already was. It wasn't exactly San Diego State to begin with.
-				Kent Brockman: [Doing a live newscast] How can I prove that we're live? Penis.
-				Homer: It's everybody's fault but mine.
-				Ned Flanders: Sir... There's no reason Sarah needs to do this scene in the altogether.  Sara Sloane: Sam, he's got a point. Katherine Hepburn never showed her breasts.  Movie Director: There's still time.
-				Bart: I smell a museum.  Homer: Yeah, good things don't end with 'eum,' they end with 'mania' or 'teria.'
-				Bart: [reading] Whoa, Dad's been arrested six times. Aww, Mom's only been arrested twice.
-				Chief Wiggum: All right, Simpson, where's the fire?  [Homer points to the police station, which is on fire]  Chief Wiggum: All right, Simpson. You just bought yourself a 417, pointing out police stupidity. Or is that a 413? No, a 413 is a dog, and... um... you're in trouble, pal.
-				Ned Flanders: You know, a man came into the store today and asked for change for a dollar, and I accidentally gave him three quarters. Took me all afternoon just to track him down.
-				Homer: The problem in the world today is communication. Too much communication.
-				Professor Frink: Oh, what gave me away? Out of curiosity, was it the "hoyven," or the "maven," or was it the whole guh-HOYVEE... thing... that I do?
-				Homer: [drunk] See, the thing about my family is there are five of 'em: Marge, Bart, girl Bart, the one that doesn't talk, and the fat guy. Oh, how I loathe him.
-				Lisa: Cheer up, Dad. Did you know the Chinese use the same word for 'crisis' as they do for 'opportunity'?  Homer: Yes. Crisitunity.
-				Homer: Well, I hope you've learnt your lesson, Lisa: never help anyone.
-				Secret Service Agent: I can do everything from reading bedtime stories to changing diapers.  Grampa: Put me down for one of each.
-				Lisa: Oh, figs.
-			   
+				The Simpsons is an American animated sitcom created by Matt Groening for the Fox Broadcasting Company. The series is a satirical depiction of working-class life, epitomized by the Simpson family, which consists of Homer, Marge, Bart, Lisa, and Maggie. The show is set in the fictional town of Springfield and parodies American culture and society, television, and the human condition.
+			</p>
+			<p>
+				The family was conceived by Groening shortly before a solicitation for a series of animated shorts with producer James L. Brooks. Groening created a dysfunctional family and named the characters after his own family members, substituting Bart for his own name. The shorts became a part of The Tracey Ullman Show on April 19, 1987. After three seasons, the sketch was developed into a half-hour prime time show and became Fox's first series to land in the Top 30 ratings in a season (1989–90).
+			</p>
+			<p>
+				Since its debut on December 17, 1989, 680 episodes of The Simpsons have been broadcast. It is the longest-running American sitcom, and the longest-running American scripted primetime television series, both in terms of seasons and number of episodes. The Simpsons Movie, a feature-length film, was released in theaters worldwide on July 27, 2007, and grossed over $527 million. Then on October 30, 2007, a video game was released. The Simpsons was renewed on February 6, 2019 for a thirty-first and thirty-second season. The former began airing September 29, 2019 and will conclude on May 17, 2020, and the latter of which will contain the 700th episode. The Simpsons is a joint production by Gracie Films and 20th Century Fox Television and syndicated by 20th Television.
+			</p>
+			<p>
+				The Simpsons received acclaim throughout its first nine or ten seasons, which are generally considered its "Golden Age". Time named it the 20th century's best television series,[10] and Erik Adams of The A.V. Club named it "television's crowning achievement regardless of format".[11] On January 14, 2000, the Simpson family was awarded a star on the Hollywood Walk of Fame. It has won dozens of awards since it debuted as a series, including 34 Primetime Emmy Awards, 34 Annie Awards, and a Peabody Award. Homer's exclamatory catchphrase "D'oh!" has been adopted into the English language, while The Simpsons has influenced many other later adult-oriented animated sitcoms. However, it has also been criticized for a perceived decline in quality over the years.
 			</p>
 			<div class="row">
 				<div class="col-md-12" id="graph1">
@@ -123,13 +116,50 @@
 				<div class="col-md-12" id="graph3">
 					<hr>
 					<h2>
-						<center><B>Graph 3</B></center>
+						<center><B>US Viewers per Episode in a Season</B></center>
 					</h2>
-					<canvas id="tychart" width="400" height="400"></canvas>
+					<br>
+					<center><div class="dropdown">
+						<h4>
+							<label for="seasons"><b>Choose a Season:</b></label>
+						</h4>
+						<select id="seasons">
+  							<option value="1">Season 1</option>
+  							<option value="2">Season 2</option>
+							<option value="3">Season 3</option>
+							<option value="4">Season 4</option>
+							<option value="5">Season 5</option>
+							<option value="6">Season 6</option>
+							<option value="7">Season 7</option>
+							<option value="8">Season 8</option>
+							<option value="9">Season 9</option>
+							<option value="10">Season 10</option>
+							<option value="11">Season 11</option>
+							<option value="12">Season 12</option>
+							<option value="13">Season 13</option>
+							<option value="14">Season 14</option>
+							<option value="15">Season 15</option>
+							<option value="16">Season 16</option>
+							<option value="17">Season 17</option>
+							<option value="18">Season 18</option>
+							<option value="19">Season 19</option>
+							<option value="20">Season 20</option>
+							<option value="21">Season 21</option>
+							<option value="22">Season 22</option>
+							<option value="23">Season 23</option>
+							<option value="24">Season 24</option>
+							<option value="25">Season 25</option>
+							<option value="26">Season 26</option>
+							<option value="27">Season 27</option>
+							<option value="28">Season 28</option>
+						</select>
+					  </div></center>
+					  <br>
+					<center><canvas id="tyChart" width="100"></canvas></center>
 					<br>
 					<br>
 					<p>
-						Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+						The most viewed episode in Simpsons history is episode 9 in season 1 called, "Life on the fast lane". The episode originally aired on Fox on March 18, 1990 and had 33.5 million viewers.
 					</p>
 				</div>
 			</div>
@@ -181,5 +211,11 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 	<script src="apptdh.js"></script>
 	<script src="app.js"></script>
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="static/js/scripts.js"></script>
+	<script src="ty_app.js"></script>
+	<script>window.Tether = {};</script>
   </body>
 </html>
