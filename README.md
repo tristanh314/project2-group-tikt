@@ -73,7 +73,7 @@ Bubble scatter (user chooses catchphrase from dropdown)
 
 ### Sketch from Ty:
 
-    ![ty sketch](Simpsons Wireframe.pdf)
+* ![ty sketch](wrieframe.png)
 
 ### Additional JavaScript library: “chart.js”
 * Good documentation
