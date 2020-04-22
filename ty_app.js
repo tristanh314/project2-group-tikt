@@ -29,7 +29,7 @@ d3.json("static/data/simpson_episodes.json").then(function(simpsonsData)
           ]
         },
         options: {
-          // responsive: false,
+          responsive: false,
           // layout: {
           //   padding: {
           //       left: 50,
