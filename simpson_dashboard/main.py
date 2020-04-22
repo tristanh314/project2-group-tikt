@@ -16,7 +16,6 @@ app.config['MONGO_URI'] = os.environ.get('MONGO_URL') or "mongodb://localhost:27
 # Use PyMongo to establish Mongo connection.
 mongo = PyMongo(app)
 
-
 # Route to render index.html template using data from Mongo.
 @app.route("/")
 def home():
