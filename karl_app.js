@@ -31,7 +31,7 @@ function make_imdb_chart() {
         type: 'line',
         data: dataSet,
         options: {
-            responsive: false,
+            maintainAspectRatio: true,
             stacked: false,
             title:{
                 display: true,

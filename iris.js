@@ -77,7 +77,6 @@ function makeGraph(TING) {
           labels: larbels
       },
       options: {
-        responsive: false,
         maintainAspectRatio: true
       }
     });

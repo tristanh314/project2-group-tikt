@@ -146,7 +146,6 @@ function renderBubble(season, catchphrase) {
 
             // Set the options for the plot.
             chartOptions = {
-                responsive: false,
                 maintainAspectRatio: true,
                 legend: {
                     display: false
