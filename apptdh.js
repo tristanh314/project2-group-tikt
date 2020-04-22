@@ -168,7 +168,7 @@ function renderBubble(canvas, season, catchphrase) {
             }
 
             // Render the bubble chart.
-            new Chart(canvas, {
+            var tdhchart = new Chart(canvas, {
                 type: 'bubble',
                 data: {
                     labels: `Season ${season} Occurances of ${catchphrase}`,
@@ -179,3 +179,42 @@ function renderBubble(canvas, season, catchphrase) {
         });
     });
 }
+
+// Function to run when the page first loads.
+function inittdh() {
+    
+    // Select the canvas to contain the bubble chart.
+    var canvas = document.getElementById("tdhchart");
+
+    // Set the initial season.
+    var season = 1;
+
+    // Set the initial catchphrase.
+    var catchphrase = "homer";
+    
+    // Render the initial bubble chart.
+    vrenderBubble(canvas, season, catchphrase);
+}
+
+// Function to run when a selection changes.
+function optionChangedtdh() {
+
+    // Select the canvas to contain the bubble chart.
+    var canvas = document.getElementById("tdhchart");
+
+    // Get the season.
+    var season = parseInt(d3.select("#selSeason").property("value"));
+
+    // Get the catchphrase.
+    var catchphrase = d3.select("#input-catchphrase").property("value"); 
+
+    // Render the new bubble chart.
+    renderBubble(canvas, season, catchphrase);
+}
+
+// Call optionChanged() when a change takes place to the DOM
+// d3.select("#input-catchphrase").on("change", optionChangedtdh);
+// d3.select("#selSeason").on("change", optionChangedtdh);
+
+// Run the init function
+inittdh();
