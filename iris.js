@@ -2,6 +2,18 @@
 
 function makeGraph(TING) {
   d3.json("static/data/simpson_script.json").then((sample) => { 
+    // Remove the old canvas.
+    var oldCanvas = document.getElementById("myChart");
+    oldCanvas.parentNode.removeChild(oldCanvas);
+
+    // Add the canvas to the chart div.
+    var chartDiv = document.getElementById("myChart-div");
+    var canvas = document.createElement("canvas");
+    canvas.setAttribute("id", "myChart");
+    canvas.setAttribute("width", "1000");
+    canvas.setAttribute("height", "500");
+    chartDiv.appendChild(canvas);
+
     var metadata = sample.result; 
     //console.log(metadata);
     var resultsArray = metadata.filter((data) => String(data.episode_id) === TING);
@@ -54,8 +66,7 @@ function makeGraph(TING) {
     var darta = [bart, homer, marge, lisa, skinner, flanders, milhouse, burns, krusty, lovejoy];
     var larbels = ["Bart", "Homer", "Marge", "Lisa", "Skinner", "Flanders", "Milhouse", "Burns", "Krusty", "Lovejoy"];
     //console.log(larbels);
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
+    var myChart = new Chart(canvas, {
       type: 'bar',
       data: {
           datasets: [{
@@ -64,6 +75,10 @@ function makeGraph(TING) {
               data: darta
           }],
           labels: larbels
+      },
+      options: {
+        responsive: false,
+        maintainAspectRatio: true
       }
     });
   });
