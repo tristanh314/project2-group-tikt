@@ -13,17 +13,17 @@ Home of the UO data analytics boot camp Project 2 for group TIKT
 
 ### Metadata screenshots: 
 
-![table pic](metadata_screenshots/img1.png)
+![table pic](/readme_images/metadata_screenshots/img1.png)
 
-![table pic](metadata_screenshots/img2.png)
+![table pic](/readme_images/metadata_screenshots/img2.png)
 
-![table pic](metadata_screenshots/img3.png)
+![table pic](/readme_images/metadata_screenshots/img3.png)
 
-![table pic](metadata_screenshots/img4.png)
+![table pic](/readme_images/metadata_screenshots/img4.png)
 
-![table pic](metadata_screenshots/img5.png)
+![table pic](/readme_images/metadata_screenshots/img5.png)
 
-![table pic](metadata_screenshots/img6.png)
+![table pic](/readme_images/metadata_screenshots/img6.png)
 
 ### Potential drop down menu / search filter / visualization toggle specifications that user could make:
 * Character
@@ -57,23 +57,23 @@ Bubble scatter (user chooses catchphrase from dropdown)
 
 * [website 1](https://towardsdatascience.com/the-simpsons-meets-data-visualization-ef8ef0819d13):
 
-    ![inspo pic](inspowebsite1/img1.png)
-    ![inspo pic](inspowebsite1/img2.png)
-    ![inspo pic](inspowebsite1/img3.png)
+    ![inspo pic](/readme_images/inspowebsite1/img1.png)
+    ![inspo pic](/readme_images/inspowebsite1/img2.png)
+    ![inspo pic](/readme_images/inspowebsite1/img3.png)
 
 * [website 2](https://pudding.cool/2017/08/the-office/):
 
-    ![inspo pic](inspowebsite2/img1.png)
-    ![inspo pic](inspowebsite2/img2.png)
+    ![inspo pic](/readme_images/inspowebsite2/img1.png)
+    ![inspo pic](/readme_images/inspowebsite2/img2.png)
 
 * [website 3](https://toddwschneider.com/posts/the-simpsons-by-the-data/):
 
-    ![inspo pic](inspowebsite3/img1.png)
-    ![inspo pic](inspowebsite3/img2.png)
+    ![inspo pic](/readme_images/inspowebsite3/img1.png)
+    ![inspo pic](/readme_images/inspowebsite3/img2.png)
 
 ### Sketch from Ty:
 
-* ![ty sketch](wrieframe.png)
+* ![ty sketch](/readme_images/wrieframe.png)
 
 ### Additional JavaScript library: “chart.js”
 * Good documentation
