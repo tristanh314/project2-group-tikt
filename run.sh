@@ -1,0 +1,1 @@
+FLASK_APP=simpson_dashboard/main.py flask run
