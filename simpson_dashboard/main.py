@@ -11,7 +11,7 @@ app = Flask(__name__)
 cors = CORS(app)
 
 # Set up the database. 
-app.config['MONGO_URI'] = os.environ.get('MONGODB_URI', '') or "mongodb://localhost:27017/simpson_data"
+app.config['MONGO_URI'] = "mongodb://heroku_1bchz9m0:8ptku4qco1bq0ednuc33ag3gva@ds139619.mlab.com:39619/heroku_1bchz9m0" or "mongodb://localhost:27017/simpson_data"
 
 # Use PyMongo to establish Mongo connection.
 mongo = PyMongo(app)
