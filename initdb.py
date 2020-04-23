@@ -9,8 +9,8 @@ import os
 import sys
 
 # Set connection uri
-# uri = "mongodb://heroku_1bchz9m0:8ptku4qco1bq0ednuc33ag3gva@ds139619.mlab.com:39619/heroku_1bchz9m0"
-uri = os.environ.get('MONGODB_URI', '') or "mongodb://localhost:27017/simpson_data"
+uri = "mongodb://heroku_1bchz9m0:8ptku4qco1bq0ednuc33ag3gva@ds139619.mlab.com:39619/heroku_1bchz9m0"
+# uri = os.environ.get('MONGODB_URI', '') or "mongodb://localhost:27017/simpson_data"
 
 # Function to import the data.
 def main(args):
