@@ -54,6 +54,7 @@ function makeGraph(TING) {
     var darta = [bart, homer, marge, lisa, skinner, flanders, milhouse, burns, krusty, lovejoy];
     var larbels = ["Bart", "Homer", "Marge", "Lisa", "Skinner", "Flanders", "Milhouse", "Burns", "Krusty", "Lovejoy"];
     //console.log(larbels);
+    
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
       type: 'bar',
