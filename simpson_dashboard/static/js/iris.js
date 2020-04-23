@@ -88,7 +88,7 @@ function init() {
     // reff to the dropdown select element
     var selection = d3.select("#selDataset");  
     // list of sample names used as select options
-    d3.json("static/data/simpson_episodes.json").then((data) => {
+    d3.json("/simpson_episodes").then((data) => {
       var episodeSample = data.result;
       episodeSample.sort((a, b) => (a.id-b.id));
       //console.log(episodeSample);
