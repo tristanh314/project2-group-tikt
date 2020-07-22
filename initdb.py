@@ -11,8 +11,9 @@ import dns
 from decouple import config
 
 # Set connection uri
-# URI = config('SIMPSONS_URI') or "mongodb://localhost:27017/simpson_data"
+URI = config('SIMPSONS_URI') or "mongodb://localhost:27017/simpson_data"
 print(URI)
+
 # Initialize a client.
 client = pymongo.MongoClient(URI)
 
